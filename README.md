@@ -21,5 +21,4 @@
    ```
 
 
-Use appropriate font to see the gylphs  - FiraCode Nerd Font
-Restart the terminal.
+Use appropriate font to see the gylphs  - FiraCode Nerd Font 
