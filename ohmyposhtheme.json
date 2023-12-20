@@ -30,6 +30,9 @@
           "properties": {
             "fetch_stash_count": true,
             "fetch_status": true,
+			"display_status": true,
+			"display_stash_count": true,
+			"display_upstream_icon": true,
             "fetch_upstream_icon": true
           }
         },
