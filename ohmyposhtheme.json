@@ -30,22 +30,37 @@
           "properties": {
             "fetch_stash_count": true,
             "fetch_status": true,
-			"display_status": true,
-			"display_stash_count": true,
-			"display_upstream_icon": true,
+            "display_status": true,
+            "display_stash_count": true,
+            "display_upstream_icon": true,
             "fetch_upstream_icon": true
           }
         },
         {
           "type": "dotnet",
           "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#ffffff",
-          "background": "#6CA35E",
-          "template": " \ue70c {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} ",
+          "powerline_symbol": "",
+          "foreground": "#000000",
+          "background": "#00ffff",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "az",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "#000000",
+          "background": "#9ec3f0",
+          "template": "  {{ .EnvironmentName }}",
           "properties": {
-            "fetch_version": true
+            "source": "pwsh"
           }
+        },
+        {
+          "type": "connection",
+          "style": "powerline",
+          "background": "#8822ee",
+          "foreground": "#222222",
+          "powerline_symbol": ""
         },
         {
           "type": "root",
@@ -54,6 +69,27 @@
           "foreground": "#ffffff",
           "background": "#ffff66",
           "template": " \uf0e7 "
+        },
+        {
+          "type": "project",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "#193549",
+          "background": "#ffeb3b",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
+        },
+        {
+          "type": "ipify",
+          "style": "diamond",
+          "foreground": "#ffffff",
+          "background": "#c386f1",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "template": "{{ .IP }}",
+          "properties": {
+            "cache_timeout": 5,
+            "http_timeout": 1000
+          }
         },
         {
           "type": "exit",
